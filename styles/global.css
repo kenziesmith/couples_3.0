@@ -1,0 +1,42 @@
+/****************************** RESET ******************************/
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+* ::before,
+* ::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Основные параметры */
+html,
+body {
+    font-family: 'Merriweather Sans', sans-serif;
+    background-color: #141414;
+    color: #fff;
+    min-width: 320px;
+    height: 100%;
+}
+
+.container {
+    max-width: calc(1170px + 30px);
+    padding: 0 15px;
+    margin: 0 auto;
+}
