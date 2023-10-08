@@ -58,11 +58,11 @@ export default class AmazingCard extends Card {
   set number(value) {
     this._number = value;
 
-    if (value <= 8) {
-      this.setImg(`./img/couples-${value}.jpg`);
-    } else {
+    // if (value <= 8) {
+    //   this.setImg(`./img/couples-${value}.jpg`);
+    // } else {
       this.cardElement.textContent = value;
-    }
+    // }
   }
   get number() { return this._number }
 }

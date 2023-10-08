@@ -47,7 +47,7 @@ function runGame(app, numberOfCards) {
 
       setTimeout(() => {
         if (document.querySelectorAll('.success').length == cardElements.length) {
-          alert('Поздравляю! Ты проебал время вникуда!');
+          alert('WIN!');
 
           cardElements = [];
           firstCard = null;
@@ -63,16 +63,15 @@ function runGame(app, numberOfCards) {
   }
 }
 
-// на страте будем получать чётное кол-во карточек, а после запускать саму игру
 function start() {
-  const app = document.getElementById('app'); // получаем игровое поле
-  app.innerHTML = ''; // очистим игровое поле
+  const app = document.getElementById('app');
+  app.innerHTML = '';
 
-  const numberOfCards = +prompt('Введи ЧЁТНОЕ кол-во карточек для игры:'); // кол-во карточек
+  const numberOfCards = +prompt('Введи чётное кол-во карточек для игры:');
 
   if ((numberOfCards % 2) !== 0 || !numberOfCards) {
-    app.innerHTML = ''; // очистим игровое поле
-    alert('Ты еб*ан или да?\nОк = да'); // рил
+    app.innerHTML = '';
+    alert('Error! Условия игры: поле 4x4');
 
     runGame(app, 16);
     return;
